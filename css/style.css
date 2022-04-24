@@ -9,7 +9,6 @@ body {
   font-family: "Barlow", sans-serif;
   font-weight: 400;
   line-height: 1.25;
-  background-color: #3dbeff;
 }
 
 ul,
@@ -31,11 +30,41 @@ h6 {
   font-family: "Fraunces", serif;
 }
 
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+p {
+  font-size: 18px;
+}
+
 .container {
   width: 100%;
   max-width: 1400px;
   padding: 0 16px;
   margin: 0 auto;
+}
+
+.learn-more {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  color: hsl(212deg, 27%, 19%);
+  text-transform: uppercase;
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+}
+.learn-more::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: hsl(51deg, 100%, 49%);
+  opacity: 0.2;
+  z-index: -1;
 }
 
 #header {
@@ -58,14 +87,14 @@ h6 {
   margin-left: 40px;
 }
 #header nav ul li .nav-link {
-  color: #ffffff;
+  color: hsl(0deg, 0%, 100%);
   display: block;
-  font-size: 18px;
+  font-size: 16px;
 }
 #header nav ul li .nav-btn {
   padding: 16px 24px;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(212deg, 27%, 19%);
   font-family: "Fraunces", serif;
   text-transform: uppercase;
   font-size: 14px;
@@ -82,7 +111,7 @@ h6 {
   padding-top: 184px;
 }
 #hero-section h1 {
-  color: #ffffff;
+  color: hsl(0deg, 0%, 100%);
   text-transform: uppercase;
   font-size: 56px;
   letter-spacing: 8px;
@@ -91,4 +120,28 @@ h6 {
 #hero-section button {
   background-color: transparent;
   border: none;
+}
+
+#content-section {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+#content-section .content {
+  display: grid;
+  place-content: center;
+  padding: 0 120px;
+}
+#content-section .content h2 {
+  font-size: 48px;
+  margin-bottom: 16px;
+  color: hsl(212deg, 27%, 19%);
+}
+#content-section .content p {
+  color: hsl(213deg, 9%, 39%);
+  line-height: 1.5;
+  font-weight: 600;
+}
+#content-section .content .learn-more {
+  justify-self: flex-start;
+  margin-top: 16px;
 }/*# sourceMappingURL=style.css.map */

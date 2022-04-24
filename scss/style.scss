@@ -8,7 +8,6 @@ body {
   font-family: 'Barlow', sans-serif;
   font-weight: 400;
   line-height: 1.25;
-  background-color: #3dbeff;
 }
 ul,
 ol {
@@ -26,11 +25,52 @@ h5,
 h6 {
   font-family: 'Fraunces', serif;
 }
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+p {
+  font-size: 18px;
+}
+// Primary colors
+$soft-red: hsl(7, 99%, 70%);
+$yellow: hsl(51, 100%, 49%);
+$dark-desaturated-cyan: hsl(167, 40%, 24%);
+$dark-blue: hsl(198, 62%, 26%);
+$dark-moderate-cyan: hsl(168, 34%, 41%);
+// Neutral colors
+$very-dark-desaturated-blue: hsl(212, 27%, 19%);
+$very-dark-grayish-blue: hsl(213, 9%, 39%);
+$dark-grayish-blue: hsl(232, 10%, 55%);
+$grayish-blue: hsl(210, 4%, 67%);
+$white: hsl(0, 0%, 100%);
+
 .container {
   width: 100%;
   max-width: 1400px;
   padding: 0 16px;
   margin: 0 auto;
+}
+
+.learn-more {
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  color: $very-dark-desaturated-blue;
+  text-transform: uppercase;
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: $yellow;
+    opacity: 0.2;
+    z-index: -1;
+  }
 }
 // header
 #header {
@@ -53,14 +93,14 @@ h6 {
           margin-left: 40px;
         }
         .nav-link {
-          color: #ffffff;
+          color: $white;
           display: block;
-          font-size: 18px;
+          font-size: 16px;
         }
         .nav-btn {
           padding: 16px 24px;
-          background-color: #ffffff;
-          color: #000000;
+          background-color: $white;
+          color: $very-dark-desaturated-blue;
           font-family: 'Fraunces', serif;
           text-transform: uppercase;
           font-size: 14px;
@@ -81,7 +121,7 @@ h6 {
   background-position: top left;
   padding-top: 184px;
   h1 {
-    color: #ffffff;
+    color: $white;
     text-transform: uppercase;
     font-size: 56px;
     letter-spacing: 8px;
@@ -93,3 +133,28 @@ h6 {
   }
 }
 // hero-section
+// content-section
+#content-section {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  .content {
+    display: grid;
+    place-content: center;
+    padding: 0 120px;
+    h2 {
+      font-size: 48px;
+      margin-bottom: 16px;
+      color: $very-dark-desaturated-blue;
+    }
+    p {
+      color: $very-dark-grayish-blue;
+      line-height: 1.5;
+      font-weight: 600;
+    }
+    .learn-more {
+      justify-self: flex-start;
+      margin-top: 16px;
+    }
+  }
+}
+// content-section
