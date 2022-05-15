@@ -1,1 +1,3 @@
-# Sunny agency landing page Frontendmentor-Challenge
+# Sunny agency landing page
+
+- Frontendmentor Challenge
