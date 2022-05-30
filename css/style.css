@@ -144,4 +144,78 @@ p {
 #content-section .content .learn-more {
   justify-self: flex-start;
   margin-top: 16px;
+}
+#content-section .content-with-image {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+#content-section .content-with-image img {
+  aspect-ratio: 1/1;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  grid-row-start: 1;
+  grid-row-end: -1;
+  grid-column: 1;
+}
+#content-section .content-with-image .inner-content {
+  grid-row-start: 3;
+  grid-row-end: -1;
+  grid-column: 1;
+  padding: 40px 24px;
+  text-align: center;
+  max-width: 420px;
+  margin: 0 auto;
+}
+#content-section .content-with-image .inner-content h3 {
+  font-size: 32px;
+  opacity: 0.8;
+}
+
+#testimonial {
+  padding: 140px 0;
+}
+#testimonial h2 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 24px;
+  color: lightgray;
+  text-align: center;
+}
+#testimonial .grid {
+  margin-top: 72px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  gap: 24px;
+}
+#testimonial .grid .testimonial-details {
+  max-width: 380px;
+  margin: 0 auto;
+  text-align: center;
+}
+#testimonial .grid .testimonial-details p {
+  color: hsl(213deg, 9%, 39%);
+  margin-top: 40px;
+}
+#testimonial .grid .testimonial-details h3 {
+  margin-top: 32px;
+  margin-bottom: 0;
+}
+#testimonial .grid .testimonial-details span {
+  color: hsl(210deg, 4%, 67%);
+  display: inline-block;
+  margin-top: 8px;
+}
+#testimonial .grid .avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 9999px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+#testimonial .grid .avatar img {
+  width: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */
